@@ -1,9 +1,9 @@
 const axios = require('axios');
 const TelegramBot = require('node-telegram-bot-api');
-
+require('dotenv').config()
 // Configuration
-const token = 'YOUR_TELEGRAM_BOT_TOKEN'; // Replace with your Telegram bot token
-const chatId = 'YOUR_CHAT_ID'; // Replace with your Telegram chat ID
+const token = process.env.BOT_API_KEY; // Replace with your Telegram bot token
+const chatID = process.env.CHANNEL_ID; // Replace with your Telegram bot token 
 const coinId = 'solana'; // Replace with the specific Solana coin ID (e.g., 'solana')
 const priceThreshold = 100; // Replace with your target price
 
